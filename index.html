@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shimla Historical Map</title>
+
+  <!-- Mapbox -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet"/>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="container">
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <h2>Shimla Evolution</h2>
+
+    <label>Year</label>
+    <input type="range" id="yearSlider" min="1830" max="2025" value="1900">
+    <span id="yearValue">1900</span>
+
+    <label>Type</label>
+    <select id="typeFilter">
+      <option value="all">All</option>
+      <option value="govt">Government</option>
+      <option value="library">Library</option>
+      <option value="hotel">Hotel</option>
+    </select>
+
+    <label>Search</label>
+    <input type="text" id="searchBox" placeholder="Search place">
+
+    <p id="count">Total: 0</p>
+
+    <button id="playBtn">▶ Play</button>
+    <button id="pauseBtn">⏸ Pause</button>
+
+    <div id="chart"></div>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
